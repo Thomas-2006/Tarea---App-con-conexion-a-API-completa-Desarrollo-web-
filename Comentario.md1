@@ -1,0 +1,40 @@
+# Comentario/replica sobre las preguntas de la tarea: App con conexion a API completa
+
+## ¿Qué ventajas y desventajas tiene usar JSON Server?
+
+**Ventajas:**
+- Es muy fácil de configurar y usar, ideal para prototipos o pruebas rápidas.
+- Permite tener una API REST completa sin necesidad de programar el backend.
+- Soporta operaciones CRUD completas y persistencia en un archivo `.json`.
+
+**Desventajas:**
+- No es seguro ni escalable para producción.
+- No permite lógica compleja del lado del servidor.
+- No tiene autenticación ni control de acceso.
+
+**¿Cuándo lo usaría?**
+- Para pruebas locales y prototipos rápidos o proyectos educativos.
+- Cuando necesite simular una API sin tener que construir una real.
+
+**¿Cuándo no lo usaría?**
+- En aplicaciones reales en producción.
+- Cuando se necesite seguridad, autenticación o lógica de negocio compleja.
+
+---
+
+## ¿Para qué usamos el hook `useNavigate`?
+
+`useNavigate` se utiliza para redirigir al usuario a otra ruta dentro de la aplicación sin recargar la página. Por ejemplo, después de guardar un formulario, podemos llevar al usuario de vuelta al listado.
+
+**¿Por qué es un hook y no una simple función?**
+Porque necesita acceder al contexto de React Router. Los hooks permiten que el componente funcione de forma reactiva y se integre con el ciclo de vida de React. Una función normal no tendría acceso a ese contexto.
+
+---
+
+## ¿Qué otras opciones se podrían implementar para mejorar el código o la experiencia de usuario?
+Algunas opciones que se podrian usar son:
+- **Separar lógica y presentación:** Usar componentes más pequeños y reutilizables para que el código sea más fácil de mantener.
+- **Validación de formularios:** Implementar validaciones con librerías como `Yup` o `React Hook Form` para evitar errores de entrada.
+- **Mensajes de éxito/error:** Mostrar alertas o notificaciones cuando se actualiza un dato correctamente o si ocurre un error.
+- **Carga condicional:** Mostrar un spinner o mensaje de "Cargando..." mientras se espera la respuesta del servidor.
+- **Control de errores global:** Usar un manejador de errores para capturar fallos de red o del servidor.
